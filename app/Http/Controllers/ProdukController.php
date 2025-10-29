@@ -12,12 +12,15 @@ class ProdukController extends Controller
      */
     public function index(): view
     {
-        $nama = 'Pramesthi Sekar Langit';
-        $prodi = 'Sistem Informasi';
-        return view('data', [
-            'nama' => $nama,
-            'nama_prodi' => $prodi
-        ]);
+        // $nama = 'Pramesthi Sekar Langit';
+        // $prodi = 'Sistem Informasi';
+        // return view('data', [
+        //     'nama' => $nama,
+        //     'nama_prodi' => $prodi
+        // ]);
+
+        $data = Produk::all();
+        return view('produk',compact('data'));
     }
 
     /**
